@@ -7,7 +7,6 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "",
   description: "",
-  viewport: "width=device-width, initial-scale=1",
   keywords: [],
 
   openGraph: {
