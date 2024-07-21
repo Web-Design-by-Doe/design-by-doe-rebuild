@@ -14,12 +14,16 @@
     "@apollo/client": "^3.10.8",
     "@react-email/components": "0.0.21",
     "appwrite": "^15.0.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.3.6",
     "graphql": "^16.9.0",
     "next": "14.2.5",
     "react": "^18",
     "react-dom": "^18",
     "react-email": "2.1.5",
+    "react-multi-carousel": "^2.8.5",
     "resend": "^3.4.0",
+    "tailwind-merge": "^2.4.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

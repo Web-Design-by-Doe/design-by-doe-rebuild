@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import { Roboto } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+import "./globals.css";
+import Navbar from "@/components/Nav/Navbar";
+import ScrollToTop from "@/components/ScrollToTop";
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+});
 
 export const metadata: Metadata = {
   title: "",
@@ -39,7 +45,15 @@ export default function RootLayout({
         id="pianjs"
         data-code="dMN2VCzOuhqPQC8552uX59dQ3YIp7Nem"
       ></Script>
-      <body className={inter.className}>{children}</body>
+      <Script
+        type="module"
+        src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"
+      ></Script>
+      <body className={roboto.className}>
+        <Navbar />
+        <ScrollToTop />
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

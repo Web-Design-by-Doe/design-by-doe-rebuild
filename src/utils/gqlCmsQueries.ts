@@ -17,7 +17,7 @@ const GET_PORTFOLIOS = gql`
 `;
 
 const GET_PORTFOLIO_ITEM = gql`
-  query GetPortfolio($slug: String!) {
+  query getPortfolio($slug: String!) {
     portfolioData(where: { slug: $slug }) {
       clientDescription
       clientName
@@ -33,6 +33,22 @@ const GET_PORTFOLIO_ITEM = gql`
   }
 `;
 
+const GET_RECENT_PORTFOLIOS = gql`
+  query getRecentPortfolios {
+    portfolioDataItems(orderBy: createdAt_DESC, first: 3) {
+      clientDescription
+      clientName
+      clientWebsite
+      slug
+      mockupImage {
+        url
+        height
+        width
+      }
+    }
+  }
+`;
+
 const GET_PRIVACY_POLICY = gql`
   query getPrivacyPolicy {
     privacyPolicies {
@@ -41,4 +57,9 @@ const GET_PRIVACY_POLICY = gql`
   }
 `;
 
-export { GET_PORTFOLIOS, GET_PORTFOLIO_ITEM, GET_PRIVACY_POLICY };
+export {
+  GET_PORTFOLIOS,
+  GET_PORTFOLIO_ITEM,
+  GET_RECENT_PORTFOLIOS,
+  GET_PRIVACY_POLICY,
+};

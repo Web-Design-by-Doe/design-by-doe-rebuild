@@ -2,8 +2,123 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-primary: 103 27 179;
+    --color-secondary: 49 49 49;
+    --color-secondary-dark: 27 27 27;
+    --color-accent: 255 219 0;
+    --color-text: 243 243 243;
+    --color-background: 18 18 18;
+    --color-error: 209 29 43;
+    --color-success: 88 194 36;
+    --font-size-smallest: 14px;
+    --font-size-base: 18px;
+    --font-size-card-title: 20px;
+    --font-size-title: 32px;
+    --font-size-header: 68px;
+  }
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-text));
+}
+
+h2 {
+  font-size: var(--font-size-title);
+  color: rgb(var(--color-text));
+  font-weight: 500;
+}
+
+h3 {
+  font-size: var(--font-size-card-title);
+  color: rgb(var(--color-text));
+  font-weight: 500;
+}
+
+.outline-cta {
+  font-size: var(--font-size-base);
+  outline: 2px solid rgb(var(--color-primary));
+  color: rgb(var(--color-text));
+  border-radius: 5px;
+  padding: 5px 40px;
+  transition: all 0.3s;
+}
+
+.outline-cta:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 80px -10px rgb(var(--color-primary));
+}
+
+.cta {
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  background: rgb(var(--color-primary));
+  color: rgb(var(--color-text));
+  border-radius: 5px;
+  padding: 15px 0 15px 0;
+  width: 240px;
+  transition: all 0.3s;
+}
+
+.cta:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 80px -10px rgb(var(--color-primary));
+}
+
+.cta-main {
+  font-weight: 500;
+  color: rgb(var(--color-text));
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.cta-main:hover {
+  transform: translate(0, -3px);
+  box-shadow: 0 20px 80px -10px rgb(var(--color-primary));
+}
+
+.cta-secondary {
+  font-size: var(--font-size-smallest);
+  font-weight: 300;
+  color: rgb(var(--color-accent) / 70%);
+  transition: all 0.3s;
+
+  &:hover {
+    color: rgb(var(--color-accent));
+  }
+}
+
+.project-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .project-card:hover img {
+    transform: scale(1.1);
+    filter: blur(3px);
+    opacity: 0.4;
+  }
+
+  .project-card:hover h2 {
+    transform: translateX(20px);
+  }
+
+  .project-card:hover p {
+    transition-delay: 0.05s;
+    transform: translateX(20px);
   }
 }
