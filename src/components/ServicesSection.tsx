@@ -4,12 +4,12 @@ import ServiceCard from "./ServiceCard";
 import { ServiceCardProps } from "@/lib/types";
 import SectionContainer from "./SectionContainer";
 
-export default function ServicesSection() {
+export default function ServicesSection({showTitleSection = true}) {
   return (
     <SectionContainer
       className="items-center gap-10 md:gap-20"
-      title={homePageData.serviceSection.title}
-      description={homePageData.serviceSection.description}
+      title={showTitleSection ? homePageData.serviceSection.title : undefined}
+      description={showTitleSection ?  homePageData.serviceSection.description : undefined}
     >
       <div className="flex flex-wrap max-w-[990px] justify-center items-center w-full gap-6">
         {servicesCardData.map((service: ServiceCardProps) => (

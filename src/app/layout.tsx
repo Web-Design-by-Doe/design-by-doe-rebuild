@@ -4,6 +4,7 @@ import { Roboto } from "next/font/google";
 
 import "./globals.css";
 import Navbar from "@/components/Nav/Navbar";
+import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const roboto = Roboto({
@@ -53,6 +54,7 @@ export default function RootLayout({
         <Navbar />
         <ScrollToTop />
         <main>{children}</main>
+        <Footer />
       </body>
     </html>
   );

@@ -121,4 +121,16 @@ h3 {
     transition-delay: 0.05s;
     transform: translateX(20px);
   }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 370px) minmax(0, 1px) minmax(0, 370px);
+  }
+}
+
+.footer-grid {
+  max-width: 1170px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
