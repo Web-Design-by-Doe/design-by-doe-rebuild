@@ -9,16 +9,16 @@ export default function ServiceCard({
   cta,
 }: ServiceCardProps) {
   return (
-    <div className="flex flex-col gap-7 px-6 py-6 items-start justify-center w-full md:max-w-[314px] md:py-0 md:aspect-square bg-secondary-dark rounded-lg overflow-hidden">
+    <div className="bg-secondary-dark rounded-xl border border-secondary p-8 shadow-xl transition hover:shadow-primary/10 overflow-hidden service-card duration-500">
       <div className="flex flex-col gap-4">
         <div className="relative">
-          <Image src={icon} alt={title} className="" />
-          <div className="w-[60px] h-[60px] absolute top-0 left-0 bg-primary rounded-full blur-3xl" />
+          <Image src={icon} alt={title} className="duration-500" />
         </div>
-        <h3>{title}</h3>
-        <p className="text-[16px]">{description}</p>
+        <div className="flex flex-col gap-1">
+          <h3>{title}</h3>
+          <p className="text-[16px] text-text/70 font-light">{description}</p>
+        </div>
       </div>
-      <button className="cta-secondary">{cta}</button>
     </div>
   );
 }

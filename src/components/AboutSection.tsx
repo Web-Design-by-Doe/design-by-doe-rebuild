@@ -1,9 +1,10 @@
 import AboutCard from "./AboutCard";
+import SectionContainer from "./SectionContainer";
 
 export default function AboutSection() {
   return (
-    <section className="flex w-full flex-col max-w-[1100px] m-auto">
+    <SectionContainer className="py-0">
       <AboutCard />
-    </section>
+    </SectionContainer>
   );
 }

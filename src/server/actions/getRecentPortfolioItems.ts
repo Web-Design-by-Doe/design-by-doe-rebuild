@@ -4,7 +4,7 @@ import { revalidatePath } from "next/cache";
 
 import client from "@/utils/apolloClient";
 import { GET_RECENT_PORTFOLIOS } from "@/utils/gqlCmsQueries";
-import { PortfolioDataItemsResponse } from "@/lib/types";
+import { PortfolioItemsResponse } from "@/lib/types";
 
 export default async function getRecentPortfolioItems() {
   try {
@@ -14,45 +14,42 @@ export default async function getRecentPortfolioItems() {
     const data = {
       portfolioDataItems: [
         {
-          __typename: "PortfolioData",
-          clientDescription:
-            "Gary is a best selling, Hampshire based author, renowned for his dark english humour.",
-          clientName: "Gary Troia - Best Selling Author",
-          clientWebsite: "www.garytroia.com",
+          clientName: "Gary Troia",
           slug: "gary-troia",
-          mockupImage: {
-            __typename: "Asset",
-            url: "https://media.graphassets.com/HF8yfTHjSui23DsysRTT",
-            height: 1547,
-            width: 2463,
+          servicesProvided: [
+            "websiteDevelopment",
+
+            "websiteAnalytics",
+            "seoOptimisation",
+          ],
+          clientThumbnail: {
+            url: "https://media.graphassets.com/iMLBEOeUT2Wh0bleZWPM",
+            width: 1500,
+            height: 1060,
           },
         },
         {
-          __typename: "PortfolioData",
-          clientDescription:
-            "Gary is a best selling, Hampshire based author, renowned for his dark english humour.",
-          clientName: "Gary Troia - Best Selling Author",
-          clientWebsite: "www.garytroia.com",
+          clientName: "EG Cosmetics",
           slug: "gary-troia",
-          mockupImage: {
-            __typename: "Asset",
-            url: "https://media.graphassets.com/HF8yfTHjSui23DsysRTT",
-            height: 1547,
-            width: 2463,
+          servicesProvided: ["websiteMaintenance", "websiteAnalytics"],
+          clientThumbnail: {
+            url: "https://media.graphassets.com/bTpazybSAD9Wq6xew39w",
+            width: 1500,
+            height: 1060,
           },
         },
         {
-          __typename: "PortfolioData",
-          clientDescription:
-            "Gary is a best selling, Hampshire based author, renowned for his dark english humour.",
-          clientName: "Gary Troia - Best Selling Author",
-          clientWebsite: "www.garytroia.com",
+          clientName: "Tops Aerospace",
           slug: "gary-troia",
-          mockupImage: {
-            __typename: "Asset",
-            url: "https://media.graphassets.com/HF8yfTHjSui23DsysRTT",
-            height: 1547,
-            width: 2463,
+          servicesProvided: [
+            "websiteMaintenance",
+            "websiteDevelopment",
+            "seoOptimisation",
+          ],
+          clientThumbnail: {
+            url: "https://media.graphassets.com/MI2oNWrkSVyFsMCU9JAI",
+            width: 1500,
+            height: 1060,
           },
         },
       ],

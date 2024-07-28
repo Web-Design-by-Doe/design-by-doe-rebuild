@@ -35,7 +35,7 @@ export default function ScrollToTop() {
           initial="initial"
           animate="animate"
           exit="exit"
-          className="fixed bottom-4 right-4 p-2 bg-accent text-background rounded-full z-50"
+          className="fixed bottom-4 right-4 p-2 bg-primary/10 backdrop-blur-md border border-primary/15 text-background rounded-full z-50"
           onClick={() => {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}

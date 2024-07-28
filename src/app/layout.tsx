@@ -6,6 +6,7 @@ import "./globals.css";
 import Navbar from "@/components/Nav/Navbar";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
+import GRecaptchaWrapper from "@/components/GRecaptchaWrapper";
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -46,15 +47,13 @@ export default function RootLayout({
         id="pianjs"
         data-code="dMN2VCzOuhqPQC8552uX59dQ3YIp7Nem"
       ></Script>
-      <Script
-        type="module"
-        src="https://unpkg.com/@splinetool/viewer@1.9.0/build/spline-viewer.js"
-      ></Script>
       <body className={roboto.className}>
-        <Navbar />
-        <ScrollToTop />
-        <main>{children}</main>
-        <Footer />
+        <GRecaptchaWrapper>
+          <Navbar />
+          <ScrollToTop />
+          <main>{children}</main>
+          <Footer />
+        </GRecaptchaWrapper>
       </body>
     </html>
   );

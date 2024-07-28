@@ -6,39 +6,33 @@ import { getRecentPortfolioItems } from "@/server/actions";
 import SectionContainer from "./SectionContainer";
 import ProjectCard from "./ProjectCard";
 import { homePageData } from "@/data/homePageData";
-import { PortfolioDataItem } from "@/lib/types";
+import { PortfolioItem } from "@/lib/types";
+import BluredBlob from "./BluredBlob";
+import PortfolioSection from "./PortfolioSection";
+import PortfoliosContainer from "./PortfoliosContainer";
 
 export default async function RecentProjectsSection() {
   const recentProjects = await getRecentPortfolioItems();
-  console.log(recentProjects);
 
   return (
     <>
       {recentProjects && (
         <SectionContainer
-          className="items-center gap-10 md:gap-20"
+          className="items-center pb-[140px] gap-10 md:gap-20 bg-secondary/30 border-t border-b border-secondary rounded-xl px-4 relative overflow-hidden"
           title={homePageData.recentProjectsSection.title}
           description={homePageData.recentProjectsSection.description}
         >
-          <div className="flex flex-col w-full gap-2">
+          <div className="z-30">
+            <PortfoliosContainer portfolios={recentProjects} />
             <Link
               href="/portfolio"
-              className="w-full flex gap-2 justify-end text-primary px-4"
+              className="w-full flex gap-2 justify-center text-primary px-4"
             >
               View all{" "}
               <Image src="/icons/openArrow.svg" alt="" width={10} height={10} />
             </Link>
-            <div className="relative project-cards-container">
-              {recentProjects.map((project: PortfolioDataItem, index) => (
-                <ProjectCard
-                  key={project.slug}
-                  project={project}
-                  index={index}
-                />
-              ))}
-              <div className="absolute top-0 left-0 z-10 w-full h-full rounded-full blur-[200px] opacity-20 bg-gradient-to-tr bg-primary to-[#7B16DF]" />
-            </div>
           </div>
+          <BluredBlob />
         </SectionContainer>
       )}
     </>

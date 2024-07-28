@@ -29,20 +29,34 @@ export type CtaProps = {
   value: string;
 };
 
-export type MockupImage = {
+export type PortfolioImage = {
   url: string;
   height: number;
   width: number;
 };
 
-export type PortfolioDataItem = {
-  clientDescription: string;
-  clientName: string;
-  clientWebsite: string;
-  slug: string;
-  mockupImage: MockupImage;
+export type PortfolioItemsResponse = {
+  data: {
+    portfolioItems: PortfolioItem[];
+  };
 };
 
-export type PortfolioDataItemsResponse = {
-  portfolioDataItems: PortfolioDataItem[];
+export type PortfolioItem = {
+  clientName: string;
+  slug: string;
+  servicesProvided: string[];
+  clientThumbnail: PortfolioImage;
+};
+
+export type TestimonialCardProps = {
+  name: string;
+  title: string;
+  rating: number;
+  image: {
+    src: string;
+    alt: string;
+    height: number;
+    width: number;
+  };
+  content: string;
 };

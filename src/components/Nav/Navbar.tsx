@@ -4,7 +4,7 @@ import HamburgerNav from "./HamburgerNav";
 
 export default function Navbar() {
   return (
-    <header className="fixed w-full  top-0 z-50 bg-background/60 backdrop-blur-md shadow-background shadow-sm">
+    <header className="fixed w-full top-0 z-50 bg-gradient-to-b from-background to-transparent backdrop-blur-md shadow-background">
       <nav className="flex md:grid md:grid-cols-3 items-center py-4 px-8 max-w-[1668px] m-auto">
         <div className="flex justify-start">
           {/* replace with logo */}

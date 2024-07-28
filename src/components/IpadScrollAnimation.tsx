@@ -37,11 +37,11 @@ export default function IpadScrollAnimation({
 
   return (
     <div
-      className="h-[60rem] sm:h-[70rem] md:h-[80rem] max-w-4xl flex items-center justify-center relative p-2 md:p-20 duration-300"
+      className="h-[70rem] md:h-[80rem] max-w-5xl flex items-center justify-center relative p-2 md:p-20 duration-300"
       ref={containerRef}
     >
       <div
-        className=" md:pt-40 md:pb-20 w-full relative"
+        className="pt-40 md:pb-20 w-full relative flex flex-col md:gap-20"
         style={{
           perspective: "1000px",
         }}
@@ -55,13 +55,13 @@ export default function IpadScrollAnimation({
   );
 }
 
-export const Header = ({ translate, titleComponent }: any) => {
+export const Header = ({ translate, titleComponent, className }: any) => {
   return (
     <motion.div
       style={{
         translateY: translate,
       }}
-      className="div md:pb-40 max-w-2xl mx-auto text-center"
+      className={`div pb-20 max-w-2xl mx-auto text-center ${className}`}
     >
       {titleComponent}
     </motion.div>
@@ -86,7 +86,7 @@ export const Card = ({
         boxShadow:
           "0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003",
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[30rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="max-w-5xl -mt-12 mx-auto h-[40rem] w-full border-4 border-[#6C6C6C] p-2 md:p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
       <div className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2xl md:p-1">
         {children}

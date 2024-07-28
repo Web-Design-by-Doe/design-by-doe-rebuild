@@ -6,7 +6,7 @@ export default function SectionTitleCard({
   description?: string;
 }) {
   return (
-    <div className="flex flex-col max-w-2xl items-center">
+    <div className="flex flex-col max-w-2xl items-center z-20">
       <h2>{title}</h2>
       <p className="text-base text-center">{description}</p>
     </div>

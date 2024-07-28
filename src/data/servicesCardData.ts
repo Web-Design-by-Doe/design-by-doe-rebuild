@@ -3,8 +3,8 @@ export const servicesCardData = [
     icon: {
       src: "/icons/webdevelopment.svg",
       alt: "Website Development",
-      height: 60,
-      width: 60,
+      height: 48,
+      width: 48,
     },
     title: "Website Development",
     description:
@@ -15,8 +15,8 @@ export const servicesCardData = [
     icon: {
       src: "/icons/webmaintenance.svg",
       alt: "Website Development",
-      height: 60,
-      width: 60,
+      height: 48,
+      width: 48,
     },
     title: "Website Maintenance",
     description:
@@ -27,8 +27,8 @@ export const servicesCardData = [
     icon: {
       src: "/icons/webhosting.svg",
       alt: "Website Development",
-      height: 60,
-      width: 60,
+      height: 48,
+      width: 48,
     },
     title: "Website Hosting",
     description:
@@ -39,8 +39,8 @@ export const servicesCardData = [
     icon: {
       src: "/icons/webanalytics.svg",
       alt: "Website Development",
-      height: 60,
-      width: 60,
+      height: 48,
+      width: 48,
     },
     title: "Website Analytics",
     description:
@@ -51,8 +51,8 @@ export const servicesCardData = [
     icon: {
       src: "/icons/webdesign.svg",
       alt: "Website Development",
-      height: 60,
-      width: 60,
+      height: 48,
+      width: 48,
     },
     title: "UI/UX Design",
     description:
@@ -63,8 +63,8 @@ export const servicesCardData = [
     icon: {
       src: "/icons/weboptimisation.svg",
       alt: "Website Development",
-      height: 60,
-      width: 60,
+      height: 48,
+      width: 48,
     },
     title: "SEO Optimization",
     description:

@@ -1,13 +1,13 @@
 import Image from "next/image";
 
-import IpadScrollAnimation from "./IpadScrollAnimation";
+import HeroSectionContent from "./IpadScrollAnimation";
 import { homePageData } from "@/data/homePageData";
 import Link from "next/link";
 
 export default function HeroSection() {
   return (
-    <section className="flex flex-col m-auto overflow-hidden">
-      <IpadScrollAnimation
+    <section className="flex flex-col m-auto overflow-hidden items-center z-30 hero-section">
+      <HeroSectionContent
         titleComponent={
           <>
             <div className="flex flex-col items-center gap-9">
@@ -19,9 +19,6 @@ export default function HeroSection() {
                   {homePageData.heroSection.subtitle}
                 </p>
               </div>
-              <Link href="/contact" className="cta">
-                {homePageData.heroSection.cta}
-              </Link>
             </div>
           </>
         }
@@ -32,7 +29,7 @@ export default function HeroSection() {
           className="mx-auto rounded-2xl object-cover h-full object-left-top"
           draggable={false}
         />
-      </IpadScrollAnimation>
+      </HeroSectionContent>
     </section>
   );
 }

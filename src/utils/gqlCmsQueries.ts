@@ -1,49 +1,51 @@
 import { gql } from "@apollo/client";
 
 const GET_PORTFOLIOS = gql`
-  query getAllPortfolios {
-    portfolioDataItems {
+  query getAllPortfolioEntries {
+    portfolioItems {
       id
-      clientDescription
       clientName
-      clientWebsite
-      reviewRating
       slug
-      mockupImage {
+      servicesProvided
+      clientThumbnail {
         url
+        width
+        height
       }
     }
   }
 `;
 
 const GET_PORTFOLIO_ITEM = gql`
-  query getPortfolio($slug: String!) {
-    portfolioData(where: { slug: $slug }) {
-      clientDescription
+  query getPortfolioEntry($slug: String!) {
+    portfolioItem(where: { slug: $slug }) {
       clientName
+      clientReviewAuthor
+      clientReviewBody
+      clientReviewRating
       clientWebsite
-      reviewRating
-      reviewAuthor
-      reviewBody
-      slug
-      mockupImage {
+      serviceDescription
+      servicesProvided
+      clientImages {
+        height
+        width
         url
       }
+      slug
     }
   }
 `;
 
 const GET_RECENT_PORTFOLIOS = gql`
-  query getRecentPortfolios {
-    portfolioDataItems(orderBy: createdAt_DESC, first: 3) {
-      clientDescription
+  query getRecentPortfolioEntries {
+    portfolioItems(orderBy: createdAt_DESC) {
+      id
       clientName
-      clientWebsite
       slug
-      mockupImage {
+      clientThumbnail {
         url
-        height
         width
+        height
       }
     }
   }

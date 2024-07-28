@@ -1,6 +1,6 @@
 import { z } from "zod";
 
-const regex = /^[+]{1}(?:[0-9-()/.]\s?){6,15}[0-9]{1}$/;
+const regex = /^(?:\+?1[-.●]?)?\(?(\d{3})\)?[-.●]?(\d{3})[-.●]?(\d{4})$/;
 
 const validationSchema = z.object({
   first_name: z
@@ -15,9 +15,11 @@ const validationSchema = z.object({
     .email({ message: "Invalid email address" }),
   sms_number: z.string().refine((value) => regex.test(value)),
   message: z.string().trim().min(1, { message: "Your message is required" }),
-  captcha: z.boolean().refine((value) => value !== true, {
-    message: "Please complete the captcha",
-  }),
+  // captcha: z.boolean().refine((value) => value !== true, {
+  //   message: "Please complete the captcha",
+  // }),
 });
 
 export default validationSchema;
+
+export type FormValues = z.infer<typeof validationSchema>;

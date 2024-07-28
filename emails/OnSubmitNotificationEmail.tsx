@@ -14,24 +14,24 @@ import {
 import * as React from "react";
 
 type OnSubmitNotificationEmailProps = {
-  firstName: string;
-  lastName?: string;
+  first_name: string;
+  last_name?: string;
   email: string;
-  number?: string;
+  sms_number?: string;
   message: string;
 };
 
 export default function OnSubmitNotificationEmail({
-  firstName,
-  lastName,
+  first_name,
+  last_name,
   email,
-  number,
+  sms_number,
   message,
 }: OnSubmitNotificationEmailProps) {
   return (
     <Html>
       <Head />
-      <Preview>New enquiry from: {firstName}</Preview>
+      <Preview>New enquiry from: {first_name}</Preview>
       <Body style={main}>
         <Container>
           <Section style={content}>
@@ -63,8 +63,8 @@ export default function OnSubmitNotificationEmail({
                     lineHeight: "32px",
                   }}
                 >
-                  You have received a new enquiry from {firstName}
-                  {lastName && ` ${lastName}`}.
+                  You have received a new enquiry from {first_name}
+                  {last_name && ` ${last_name}`}.
                 </Heading>
                 <Text
                   style={{
@@ -95,21 +95,21 @@ export default function OnSubmitNotificationEmail({
                   >
                     <li>
                       <span style={{ fontWeight: "700" }}>First Name:</span>{" "}
-                      {firstName}
+                      {first_name}
                     </li>
-                    {lastName && (
+                    {last_name && (
                       <li>
                         <span style={{ fontWeight: "700" }}>Last Name:</span>{" "}
-                        {lastName}
+                        {last_name}
                       </li>
                     )}
                     <li>
                       <span style={{ fontWeight: "700" }}>Email:</span> {email}
                     </li>
-                    {number && (
+                    {sms_number && (
                       <li>
                         <span style={{ fontWeight: "700" }}>Phone number:</span>{" "}
-                        {number}
+                        {sms_number}
                       </li>
                     )}
                   </ul>
@@ -124,12 +124,12 @@ export default function OnSubmitNotificationEmail({
 }
 
 OnSubmitNotificationEmail.PreviewProps = {
-  firstName: "Jamie",
-  lastName: "Doe",
+  first_name: "Jamie",
+  last_name: "Doe",
   email: "dummyemail@email.com",
   message:
     "I need a new website built. The website is a cool website that shows off cars and products.",
-  number: "1234567890",
+  sms_number: "1234567890",
 };
 
 const main = {

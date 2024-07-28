@@ -10,6 +10,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "www.free-mockup.com",
       },
+
+      {
+        protocol: "https",
+        hostname: "zippypixels.com",
+      },
     ],
   },
 };

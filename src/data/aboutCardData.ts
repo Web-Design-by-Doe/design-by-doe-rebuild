@@ -1,8 +1,8 @@
 export const aboutCardData = {
-  title: "Who Are We?",
+  title: "We are developers",
   content: {
     description:
-      "From one-page showcase sites to complex monsters, startup websites and redesigns, our talented team provide a personal and tailored approach to your company and website.",
+      "  We are passionate about building products that are user-friendly and visually appealing. We work closely with our clients to understand their needs and deliver solutions that meet their goals.",
     quote: {
       text: "“With nearly a decade of experience, you'd best believe were good at what we do.”",
       image: {

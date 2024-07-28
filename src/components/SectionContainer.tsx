@@ -12,10 +12,10 @@ export default function SectionContainer({
   description?: string;
 }) {
   return (
-    <section
-      className={`flex w-full flex-col max-w-[1170px] m-auto ${className}`}
-    >
-      <SectionTitleCard title={title} description={description} />
+    <section className={`flex w-full flex-col py-24 m-auto ${className}`}>
+      {(title || description) && (
+        <SectionTitleCard title={title} description={description} />
+      )}
       {children}
     </section>
   );

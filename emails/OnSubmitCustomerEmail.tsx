@@ -15,17 +15,17 @@ import {
 import * as React from "react";
 
 type OnSubmitCustomerEmailProps = {
-  firstName: string;
+  first_name: string;
 };
 
 export default function OnSubmitCustomerEmail({
-  firstName,
+  first_name,
 }: OnSubmitCustomerEmailProps) {
   const year = new Date().getFullYear();
   return (
     <Html>
       <Head />
-      <Preview>Thank you {firstName} for your enquiry!</Preview>
+      <Preview>Thank you {first_name} for your enquiry!</Preview>
       <Body style={main}>
         <Container>
           <Section style={content}>
@@ -48,7 +48,7 @@ export default function OnSubmitCustomerEmail({
                     fontWeight: "bold",
                   }}
                 >
-                  Hi {firstName},
+                  Hi {first_name},
                 </Heading>
                 <Heading
                   as="h2"
@@ -96,7 +96,7 @@ export default function OnSubmitCustomerEmail({
 }
 
 OnSubmitCustomerEmail.PreviewProps = {
-  firstName: "Alan",
+  first_name: "Alan",
 };
 
 const main = {

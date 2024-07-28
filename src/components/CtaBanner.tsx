@@ -6,8 +6,8 @@ import { ctaCardData } from "@/data/ctaCardData";
 
 export default function CtaSection() {
   return (
-    <SectionContainer>
-      <div className="bg-text flex flex-col lg:flex-row items-center justify-between text-center lg:text-start rounded-lg p-6 sm:p-14  gap-10 duration-300">
+    <SectionContainer className="max-w-[1170px]">
+      <div className="bg-text flex flex-col lg:flex-row items-center justify-between text-center lg:text-start rounded-lg p-6 sm:p-14 gap-10 duration-300">
         <CtaTitle ctaCardData={ctaCardData} />
         <div className="flex items-center md:w-1/3 md-lg:justify-center">
           <Link
